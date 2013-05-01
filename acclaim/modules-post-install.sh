@@ -1,4 +1,4 @@
 #!/bin/bash
 
-make -f $BUILD_ROOT_DIR/acclaim/modules.mk
+make -f ${DEVICE_DIR}/modules.mk
 exit $?
