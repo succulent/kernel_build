@@ -8,5 +8,9 @@ mkbootimg --kernel zImage --cmdline 'console=/dev/null' --base 0x80080000 --page
 #For internal
 #cat flashing_boot_emmc.img boot_new.img > boot.img
 mv boot_new.img boot.img
-rm boot_new.img
+
+if [ -e boot_new.img ]; then
+	rm boot_new.img
+fi
+
 exit $?
