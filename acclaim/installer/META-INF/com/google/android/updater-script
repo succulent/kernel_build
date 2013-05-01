@@ -1,0 +1,11 @@
+assert(getprop("ro.product.device") == "acclaim" || getprop("ro.build.product") == "acclaim");
+show_progress(0.900000, 10);
+mount("ext4", "EMMC", "/dev/block/mmcblk1p2", "/system");
+package_extract_dir("system", "/system");
+set_perm_recursive(0, 0, 0755, 0644, "/system/lib/modules");
+mount("vfat", "VFAT", "/dev/block/mmcblk1p1", "/sdcard");
+delete("/sdcard/boot.img");
+package_extract_file("boot.img", "/sdcard/boot.img");
+unmount("/sdcard");
+unmount("/system");
+show_progress(0.100000, 10);
