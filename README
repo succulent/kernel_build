@@ -15,6 +15,6 @@ build-zip.sh otter
 cd $HOME/android/kernel/NT3
 export PATH=$HOME/android/kernel_build/bin:$PATH
 export CM_ROOT=$HOME/android/cm10.1
-export LOCALVERSION="_$(date +%0d%^b%Y_%H)"
-build.sh acclaim acclaim_defconfig $CM_ROOT/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7
+export LOCALVERSIONS="_$(date +%0d%^b%Y_%H)"
+build.sh acclaim acclaim_defconfig $CM_ROOT/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6
 build-zip.sh acclaim
