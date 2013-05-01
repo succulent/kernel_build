@@ -68,7 +68,7 @@ echo "Building zip file..."
 cp -r $BUILD_ROOT_DIR/$DEVICE/installer $TARGET_DIR/package
 cp -r $KERNEL_MODULES_INSTALL $TARGET_DIR/package
 export zipdir=package
-export zipfile="$TARGET_DIR/kernel_${DEVICE}${LOCALVERSION}.zip"
+export zipfile="$TARGET_DIR/kernel_${DEVICE}${LOCALVERSIONS}.zip"
 
 cp -r boot.img $zipdir
 [ $? -ne 0 ] && exit 1

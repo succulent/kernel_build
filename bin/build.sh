@@ -130,7 +130,7 @@ if [ ! "$(ccache -s|grep -E 'max cache size'|awk '{print $4}')" = "10.0" ]; then
   ccache -M 10G
 fi
 
-LOGFILE=build_kernel_${DEVICE}${LOCALVERSION}_${v_toolchain}_${v_gcc}.log
+LOGFILE=build_kernel_${DEVICE}${LOCALVERSIONS}_${v_toolchain}_${v_gcc}.log
 rm -f $LOGFILE
 echo "TOOLCHAIN = $TOOLCHAIN_DIR" | tee -a $LOGFILE
 gcc --version | tee -a $LOGFILE
